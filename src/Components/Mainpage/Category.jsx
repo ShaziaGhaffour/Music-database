@@ -1,17 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Category.css';
 
-const Category = () => {
+const Category = ({ onSelectCategory, activeCategory }) => {
   const categories = [
-    'All', 'Music', 'Podcasts', 'T-Series', 'Computer Science',
-    'Game Shows', 'Motivation', 'Arabic Music', 'Live', 'Recently'
+    'All', 'Music','Pop', 'Jazz', 'Rock', 'Hip Hop', 'Classical', 'Electronic', 'Reggae',
+    'Chill', 'Live', 'Motivation'
   ];
-
-  const [activeCategory, setActiveCategory] = useState(null);
-
-  const handleCategoryClick = (category) => {
-    setActiveCategory(category);
-  };
 
   return (
     <div className="category">
@@ -19,7 +13,7 @@ const Category = () => {
         <span
           key={index}
           className={activeCategory === cat ? 'active' : ''}
-          onClick={() => handleCategoryClick(cat)}
+          onClick={() => onSelectCategory(cat)}
         >
           {cat}
         </span>
@@ -29,4 +23,5 @@ const Category = () => {
 };
 
 export default Category;
+
 
