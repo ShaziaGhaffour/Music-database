@@ -1,0 +1,64 @@
+.category {
+  position: sticky;
+  top: 4px;
+  left: 0px;
+  background-color: #fff;
+  padding: 2px 10px;
+  z-index: 10;
+  display: flex;
+  gap: 23px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.category span {
+  padding: 8px 12px;
+  background-color: #e4e4e4;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+  color: black;
+}
+.category span:hover {
+  background-color: black;
+  color: white;
+}
+.category span.active {
+  background-color: black;
+  color: white;
+}
+@media (max-width: 768px) {
+  .category {
+    gap: 16px;
+    padding: 4px 8px;
+    margin-left: 5px;
+  }
+
+  .category span {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .category {
+    gap: 12px;
+    padding: 4px 6px;
+    margin-left: 0;
+  }
+
+  .category span {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+}
+.category::-webkit-scrollbar {
+  height: 6px;
+}
+.category::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+
